@@ -136,7 +136,7 @@ async def generate_cover(thumbnail, title, userid, ctitle):
 
 
     
-@Client.on_message(command(["تشغيل","play","شغل", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["تشغيل","/play","شغل", f"play@{BOT_USERNAME}"]) & other_filters)
 @AssistantAdd
 async def play(c: Client, m: Message):
     await m.delete()
@@ -154,12 +154,10 @@ async def play(c: Client, m: Message):
                       InlineKeyboardButton("⏭️", "skip"),
                       InlineKeyboardButton("▶️", callback_data="cbresume"),
                   ],[
-                      InlineKeyboardButton(text="✨ جروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"),
-                      InlineKeyboardButton(text="📣 قناة السورس", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                     InlineKeyboardButton("سورس ايــثــون الصوتي", url=f"https://t.me/EITHMU1"),
-                     InlineKeyboardButton("سورس ايــثــون يوزربوت", url=f"https://t.me/EITHON1"),
+                      InlineKeyboardButton(text=" جروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"),
+                      InlineKeyboardButton(text=" قناة السورس", url=f"https://t.me/{UPDATES_CHANNEL}"),
                   ],[
-                      InlineKeyboardButton("🗑", callback_data="cls")],
+                      InlineKeyboardButton("🗑 اغلاق", callback_data="cls")],
                   ]
              )
     if m.sender_chat:
