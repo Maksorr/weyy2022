@@ -93,7 +93,7 @@ async def skip(client, m: Message):
 
 
 @Client.on_message(
-    command(["ايقاف", f"stop@{BOT_USERNAME}", "انهاء", f"end@{BOT_USERNAME}", "vstop"])
+    command(["ايقاف", f"stop@{BOT_USERNAME}", "/end", f"end@{BOT_USERNAME}", "vstop"])
     & other_filters
 )
 @authorized_users_only
